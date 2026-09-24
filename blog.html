@@ -7,6 +7,96 @@
 <title>Blog | Md Ramim Khan</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* Blog Post Specific Styles to match the provided image */
+  .blog-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .blog-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .blog-card-content {
+    flex: 1;
+  }
+
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  .blog-meta img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .blog-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+  }
+
+  .blog-desc {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0 0 20px 0;
+  }
+
+  .blog-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.1rem;
+    color: #777;
+  }
+
+  .blog-actions i {
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .blog-actions i:hover {
+    color: #000;
+  }
+
+  .blog-thumbnail {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .blog-card {
+      flex-direction: column-reverse;
+    }
+    .blog-thumbnail {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -53,33 +143,95 @@
 <main class="main-content">
 
 <section id="articles">
-<h1>Technical Articles &amp; Writeups</h1>
-<p>In-depth writeups on offensive security, penetration testing methodologies, machine learning applications in threat detection, and research notes.</p>
+  <h1>Technical Articles &amp; Writeups</h1>
+  <p>In-depth writeups on offensive security, penetration testing methodologies, machine learning applications in threat detection, and research notes.</p>
 
-<article class="blog-item" style="margin-top: 30px;">
-  <span>OFFENSIVE SECURITY · DEC 2025</span>
-  <h3>Web Application Security Testing: From Reconnaissance to Exploitation</h3>
-  <p>A comprehensive walkthrough of web vulnerability assessment using OWASP methodologies, covering sub-domain enumeration, parameter analysis, and privilege escalation vectors.</p>
-  <a href="https://medium.com/@romimkhan5588" target="_blank">Read full post on Medium →</a>
-</article>
+  <div class="blog-feed">
+    
+    <!-- Blog Item 1 (Based on your screenshot) -->
+    <article class="blog-card">
+      <div class="blog-card-content">
+        <div class="blog-meta">
+          <!-- Profile Icon (Change src to your logo/avatar) -->
+          <img src="assets/profile.jpg" alt="Author">
+          <span>root 28 · Jan 13, 2024</span>
+        </div>
+        <h3 class="blog-title">SQL INJECTION FUNDAMENTALS_HACK THE BOX</h3>
+        <p class="blog-desc">Intro to Databases</p>
+        <div class="blog-actions">
+          <i class="fa-regular fa-hand-back-fist" title="Claps"></i> <span>61</span>
+          <i class="fa-regular fa-bookmark" title="Save"></i>
+        </div>
+      </div>
+      <!-- Thumbnail Image (Add your image link or local path here) -->
+      <a href="#">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=400&q=80" alt="SQL Injection" class="blog-thumbnail">
+      </a>
+    </article>
 
-<article class="blog-item">
-  <span>MACHINE LEARNING · NOV 2025</span>
-  <h3>Machine Learning Strategies for Modern Intrusion Detection Systems</h3>
-  <p>An evaluation of deep learning architectures (LSTM vs BiLSTM) for identifying early reconnaissance traffic in high-noise IoT networks.</p>
-  <a href="https://medium.com/@romimkhan5588" target="_blank">Read full post on Medium →</a>
-</article>
+    <!-- Blog Item 2 (Based on your screenshot) -->
+    <article class="blog-card">
+      <div class="blog-card-content">
+        <div class="blog-meta">
+          <img src="assets/profile.jpg" alt="Author">
+          <span>root 28 · May 31, 2024</span>
+        </div>
+        <h3 class="blog-title">DC-3.2Walk-through_Vulnhub_Offsec_Playground</h3>
+        <p class="blog-desc">Description:</p>
+        <div class="blog-actions">
+          <i class="fa-regular fa-hand-back-fist" title="Claps"></i> <span>1</span>
+          <i class="fa-regular fa-bookmark" title="Save"></i>
+        </div>
+      </div>
+      <a href="#">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=400&q=80" alt="Network Walkthrough" class="blog-thumbnail">
+      </a>
+    </article>
 
-<article class="blog-item">
-  <span>OFFENSIVE SECURITY · OCT 2025</span>
-  <h3>eJPT v2 Preparation &amp; Practical Network Reconnaissance</h3>
-  <p>Key takeaways and core methodologies focused on internal network mapping, route pivoting, and web application exploitation.</p>
-  <a href="https://medium.com/@romimkhan5588" target="_blank">Read full post on Medium →</a>
-</article>
+    <!-- Blog Item 3 (Based on your screenshot) -->
+    <article class="blog-card">
+      <div class="blog-card-content">
+        <div class="blog-meta">
+          <img src="assets/profile.jpg" alt="Author">
+          <span>root 28 · May 26, 2024</span>
+        </div>
+        <h3 class="blog-title">DC-2 Walk-through_Vulnhub_Offsec_Playground_GTFOBins with Linux Privilege Escalation</h3>
+        <p class="blog-desc">Description:</p>
+        <div class="blog-actions">
+          <i class="fa-regular fa-hand-back-fist" title="Claps"></i> <span>0</span>
+          <i class="fa-regular fa-bookmark" title="Save"></i>
+        </div>
+      </div>
+      <a href="#">
+        <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=400&q=80" alt="Linux Privilege Escalation" class="blog-thumbnail">
+      </a>
+    </article>
 
-<p style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
-  Interested in more writeups? Follow my publication updates on <a href="https://medium.com/@romimkhan5588" target="_blank" style="color: #0056b3 !important; font-weight: 700;">Medium →</a>
-</p>
+    <!-- Blog Item 4 (From your previous code) -->
+    <article class="blog-card">
+      <div class="blog-card-content">
+        <div class="blog-meta">
+          <img src="assets/profile.jpg" alt="Author">
+          <span>OFFENSIVE SECURITY · DEC 2025</span>
+        </div>
+        <h3 class="blog-title">Web Application Security Testing: From Reconnaissance to Exploitation</h3>
+        <p class="blog-desc">A comprehensive walkthrough of web vulnerability assessment using OWASP methodologies, covering sub-domain enumeration, parameter analysis, and privilege escalation vectors.</p>
+        <div class="blog-actions">
+          <i class="fa-regular fa-hand-back-fist" title="Claps"></i> <span>0</span>
+          <i class="fa-regular fa-bookmark" title="Save"></i>
+        </div>
+      </div>
+      <a href="#">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80" alt="Web App Security" class="blog-thumbnail">
+      </a>
+    </article>
+
+  </div>
+
+  <p style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+    Interested in more writeups? Follow my publication updates on <a href="https://medium.com/@romimkhan5588" target="_blank" style="color: #0056b3 !important; font-weight: 700;">Medium →</a>
+  </p>
+
 </section>
 
 </main>
